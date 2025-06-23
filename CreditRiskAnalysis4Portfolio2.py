@@ -7,12 +7,12 @@ from scipy.stats import norm
 # Step 2: Load input data from CSV files
 # Each file provides part of the necessary data for credit risk modeling
 
-companies = pd.read_csv('companies.csv')                    # Contains company metadata
-portfolio = pd.read_csv('portfolio2_composition.csv')       # Portfolio exposure details
-ratings = pd.read_csv('ratings.csv')                        # Credit ratings for companies
-transitions = pd.read_csv('rating_transitions.csv', index_col=0) # Transition matrix with PDs
-stock_returns = pd.read_csv('healthcare_stock_returns.csv', parse_dates=['Date']) # Individual stock returns
-index_returns = pd.read_csv('healthcare_index.csv', parse_dates=['Date'])  # Market index returns
+companies = pd.read_csv('data/companies.csv')                    # Contains company metadata
+portfolio = pd.read_csv('data/portfolio2_composition.csv')       # Portfolio exposure details
+ratings = pd.read_csv('data/ratings.csv')                        # Credit ratings for companies
+transitions = pd.read_csv('data/rating_transitions.csv', index_col=0) # Transition matrix with PDs
+stock_returns = pd.read_csv('data/healthcare_stock_returns.csv', parse_dates=['Date']) # Individual stock returns
+index_returns = pd.read_csv('data/healthcare_index.csv', parse_dates=['Date'])  # Market index returns
 
 # Step 3: Merge portfolio, ratings, and company data into one master table
 # Creates a unified view of all portfolio exposures with company names and credit ratings
